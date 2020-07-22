@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/bloc/navigation_bloc.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget with NavigationStates {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

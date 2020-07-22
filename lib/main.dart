@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_portfolio/bloc/navigation_bloc.dart';
+import 'package:flutter_portfolio/screens/about_screen.dart';
 import 'package:flutter_portfolio/screens/home_screen.dart';
 import 'package:flutter_portfolio/widgets/navbar.dart';
 
@@ -27,18 +30,25 @@ class MainHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.only(top: 30),
-          child: Row(
-            children: [
-              NavBar(),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 30.0),
-                  child: HomeScreen(),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 30.0),
+          child: BlocProvider<NavigationBloc>(
+            create: (context) => NavigationBloc(HomeScreen()),
+            child: Row(
+              children: [
+                NavBar(),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: BlocBuilder<NavigationBloc, NavigationStates>(
+                      builder: (context, navigationState) {
+                        return navigationState as Widget;
+                      },
+                    ),
+                  ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
         ),
       ),

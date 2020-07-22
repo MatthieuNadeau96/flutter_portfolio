@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_portfolio/bloc/navigation_bloc.dart';
 
 import 'package:flutter_portfolio/model/navigation_model.dart';
 
@@ -21,9 +23,6 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.16,
-      decoration: BoxDecoration(
-          // color: Colors.grey[200],
-          ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,7 +37,26 @@ class _NavBarState extends State<NavBar> {
               itemBuilder: (context, index) {
                 return Container(
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      switch (_navItems[index].title) {
+                        case ('Home'):
+                          BlocProvider.of<NavigationBloc>(context)
+                              .add(NavigationEvents.HomeScreenClickEvent);
+                          break;
+                        case ('Projects'):
+                          BlocProvider.of<NavigationBloc>(context)
+                              .add(NavigationEvents.WorkScreenClickEvent);
+                          break;
+                        case ('About'):
+                          BlocProvider.of<NavigationBloc>(context)
+                              .add(NavigationEvents.AboutScreenClickEvent);
+                          break;
+                        case ('Contact'):
+                          BlocProvider.of<NavigationBloc>(context)
+                              .add(NavigationEvents.ContactScreenClickEvent);
+                          break;
+                      }
+                    },
                     icon: Icon(
                       _navItems[index].icon,
                       color: Colors.grey,
