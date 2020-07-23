@@ -12,11 +12,25 @@ class AboutScreen extends StatelessWidget with NavigationStates {
             'About Me',
             style: Theme.of(context).textTheme.headline3,
           ),
+          SizedBox(height: 15),
+          Text(
+            'Mobile Developer',
+            style: Theme.of(context).textTheme.headline4,
+          ),
+          SizedBox(height: 15),
+          Text(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin sem a orci semper hendrerit.',
+            style: Theme.of(context).textTheme.bodyText1,
+          ),
           SizedBox(height: 30),
           Text(
+            'Mobile Developer',
+            style: Theme.of(context).textTheme.headline4,
+          ),
+          SizedBox(height: 15),
+          Text(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin sem a orci semper hendrerit. \n' +
-                'Aliquam semper ligula id arcu vestibulum, et ornare lorem hendrerit. Suspendisse pretium ligula eget libero aliquet, nec tincidunt libero iaculis. \n' +
-                'Integer non diam consequat, finibus justo a, semper risus. Phasellus urna ligula, maximus et pretium sed, vulputate ut turpis.',
+                'Aliquam semper ligula id arcu vestibulum, et ornare lorem hendrerit. Suspendisse pretium ligula eget libero aliquet, nec tincidunt libero iaculis.',
             style: Theme.of(context).textTheme.bodyText1,
           ),
         ],

@@ -30,11 +30,11 @@ class _NavBarState extends State<NavBar> {
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: CircleAvatar(
-              backgroundColor: Colors.grey,
+              backgroundColor: Theme.of(context).iconTheme.color,
               maxRadius: 30,
               child: Icon(
                 Icons.person,
-                color: Colors.white,
+                color: Theme.of(context).canvasColor,
               ),
             ),
           ),
@@ -68,7 +68,7 @@ class _NavBarState extends State<NavBar> {
                       },
                       icon: Icon(
                         _navItems[index].icon,
-                        color: Colors.grey,
+                        color: Theme.of(context).iconTheme.color,
                       ),
                     ),
                   ),
