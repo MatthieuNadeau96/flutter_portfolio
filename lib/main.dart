@@ -21,15 +21,21 @@ class MyApp extends StatelessWidget {
           canvasColor: Colors.white,
           textTheme: TextTheme(
             headline3: TextStyle(
-              fontSize: 34,
-              color: Colors.grey[800],
-            ),
+                fontSize: 34,
+                color: Colors.grey[600],
+                fontWeight: FontWeight.bold),
             headline4: TextStyle(
               fontSize: 24,
               color: Colors.grey[600],
             ),
+            headline5: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[500],
+            ),
             bodyText1: TextStyle(
               fontSize: 14,
+              fontWeight: FontWeight.w400,
               color: Colors.grey[500], //#868786
             ),
           ),
