@@ -27,21 +27,17 @@ class DetailModal {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Tooltip(
-                      message: 'View Code',
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(FontAwesomeIcons.github),
-                        color: Colors.grey[700],
-                      ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: FaIcon(FontAwesomeIcons.github),
+                      color: Colors.grey[700],
+                      tooltip: 'View Code',
                     ),
-                    Tooltip(
-                      message: 'Live',
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: FaIcon(FontAwesomeIcons.googlePlay),
-                        color: Colors.grey[700],
-                      ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: FaIcon(FontAwesomeIcons.googlePlay),
+                      color: Colors.grey[700],
+                      tooltip: 'Live',
                     ),
                   ],
                 ),
