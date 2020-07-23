@@ -32,6 +32,10 @@ class _NavBarState extends State<NavBar> {
             child: CircleAvatar(
               backgroundColor: Colors.grey,
               maxRadius: 30,
+              child: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
             ),
           ),
           Expanded(

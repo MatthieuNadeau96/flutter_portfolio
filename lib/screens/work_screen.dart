@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/bloc/navigation_bloc.dart';
+import 'package:flutter_portfolio/widgets/detail_modal.dart';
 
 class WorkScreen extends StatelessWidget with NavigationStates {
   @override
@@ -22,9 +23,14 @@ class WorkScreen extends StatelessWidget with NavigationStates {
                 childAspectRatio: 3 / 4,
               ),
               itemBuilder: (context, index) {
-                return Container(
-                  color: Colors.grey[200],
-                  child: Center(child: Text('$index')),
+                return InkWell(
+                  onTap: () {
+                    DetailModal(title: index.toString())
+                        .mainBottomSheet(context);
+                  },
+                  child: Container(
+                    child: Center(child: Text('$index')),
+                  ),
                 );
               },
               itemCount: 10,
