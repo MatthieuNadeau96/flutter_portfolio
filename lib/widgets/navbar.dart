@@ -27,39 +27,45 @@ class _NavBarState extends State<NavBar> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            backgroundColor: Colors.grey,
-            maxRadius: 20,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: CircleAvatar(
+              backgroundColor: Colors.grey,
+              maxRadius: 30,
+            ),
           ),
           Expanded(
             child: ListView.builder(
               itemCount: _navItems.length,
               itemBuilder: (context, index) {
-                return Container(
-                  child: IconButton(
-                    onPressed: () {
-                      switch (_navItems[index].title) {
-                        case ('Home'):
-                          BlocProvider.of<NavigationBloc>(context)
-                              .add(NavigationEvents.HomeScreenClickEvent);
-                          break;
-                        case ('Projects'):
-                          BlocProvider.of<NavigationBloc>(context)
-                              .add(NavigationEvents.WorkScreenClickEvent);
-                          break;
-                        case ('About'):
-                          BlocProvider.of<NavigationBloc>(context)
-                              .add(NavigationEvents.AboutScreenClickEvent);
-                          break;
-                        case ('Contact'):
-                          BlocProvider.of<NavigationBloc>(context)
-                              .add(NavigationEvents.ContactScreenClickEvent);
-                          break;
-                      }
-                    },
-                    icon: Icon(
-                      _navItems[index].icon,
-                      color: Colors.grey,
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Container(
+                    child: IconButton(
+                      onPressed: () {
+                        switch (_navItems[index].title) {
+                          case ('Home'):
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(NavigationEvents.HomeScreenClickEvent);
+                            break;
+                          case ('Projects'):
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(NavigationEvents.WorkScreenClickEvent);
+                            break;
+                          case ('About'):
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(NavigationEvents.AboutScreenClickEvent);
+                            break;
+                          case ('Contact'):
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(NavigationEvents.ContactScreenClickEvent);
+                            break;
+                        }
+                      },
+                      icon: Icon(
+                        _navItems[index].icon,
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
                 );

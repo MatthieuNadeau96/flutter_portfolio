@@ -39,7 +39,7 @@ class MainHomeScreen extends StatelessWidget {
                 NavBar(),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: BlocBuilder<NavigationBloc, NavigationStates>(
                       builder: (context, navigationState) {
                         return navigationState as Widget;

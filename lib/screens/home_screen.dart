@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hello My Name is Matthieu Nadeau.',
+              'Hello, My Name is Matthieu Nadeau.',
               style: Theme.of(context).textTheme.headline3,
             ),
             Text(
