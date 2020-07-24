@@ -67,6 +67,7 @@ class _NavBarState extends State<NavBar> {
                         _navItems[index].icon,
                         color: Theme.of(context).iconTheme.color,
                       ),
+                      tooltip: _navItems[index].title,
                     ),
                   ),
                 );

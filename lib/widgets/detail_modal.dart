@@ -4,7 +4,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailModal {
   final String title;
-  DetailModal({this.title});
+  final String description;
+  final String phonePic;
+  final String development;
+  final List<String> tools;
+  final List<String> screenshots;
+  DetailModal({
+    this.title,
+    this.description,
+    this.phonePic,
+    this.development,
+    this.tools,
+    this.screenshots,
+  });
 
   mainBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -19,7 +31,7 @@ class DetailModal {
             child: Column(
               children: [
                 Text(
-                  'Project $title',
+                  title,
                   style: Theme.of(context).textTheme.headline3,
                 ),
                 SizedBox(height: 30),
@@ -42,48 +54,90 @@ class DetailModal {
                   ],
                 ),
                 SizedBox(height: 30),
+                Divider(
+                  color: Theme.of(context).textTheme.bodyText1.color,
+                  endIndent: MediaQuery.of(context).size.width * 0.43,
+                  indent: MediaQuery.of(context).size.width * 0.43,
+                  thickness: 1,
+                ),
+                SizedBox(height: 30),
                 Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin sem a orci semper hendrerit. \n' +
-                      'Aliquam semper ligula id arcu vestibulum, et ornare lorem hendrerit. Suspendisse pretium ligula eget libero aliquet, nec tincidunt libero iaculis. \n' +
-                      'Integer non diam consequat, finibus justo a, semper risus. Phasellus urna ligula, maximus et pretium sed, vulputate ut turpis.',
+                  description,
                   style: Theme.of(context).textTheme.bodyText1,
                 ),
                 SizedBox(height: 30),
                 Container(
-                  color: Colors.grey[300],
                   height: MediaQuery.of(context).size.height * 0.50,
                   width: double.infinity,
-                  child: Center(child: Text('Image Goes Here')),
+                  child: Image(
+                    image: AssetImage(phonePic),
+                  ),
                 ),
                 SizedBox(height: 30),
                 Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin sem a orci semper hendrerit. \n' +
-                      'Aliquam semper ligula id arcu vestibulum, et ornare lorem hendrerit. Suspendisse pretium ligula eget libero aliquet, nec tincidunt libero iaculis.',
+                  'Development',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+                SizedBox(height: 30),
+                Text(
+                  development,
                   style: Theme.of(context).textTheme.bodyText1,
                 ),
                 SizedBox(height: 30),
-                CarouselSlider(
-                  options: CarouselOptions(
-                    height: MediaQuery.of(context).size.height * 0.50,
-                    enlargeCenterPage: true,
+                Container(
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    children: List.generate(
+                      tools.length,
+                      (index) => Container(
+                        margin: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                            color: Theme.of(context).textTheme.bodyText1.color,
+                            width: 1,
+                          ),
+                        ),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                        child: Text(
+                          tools[index],
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                      ),
+                    ),
                   ),
-                  items: [1, 2, 3, 4, 5].map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return Container(
+                ),
+                SizedBox(height: 30),
+                Container(
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      viewportFraction: 0.65,
+                      autoPlay: true,
+                      pauseAutoPlayOnTouch: true,
+                      autoPlayAnimationDuration: Duration(milliseconds: 800),
+                      height: MediaQuery.of(context).size.height * 0.50,
+                      enlargeCenterPage: true,
+                    ),
+                    items: screenshots.map((i) {
+                      return Builder(
+                        builder: (BuildContext context) {
+                          return Container(
                             width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.symmetric(horizontal: 10.0),
                             decoration: BoxDecoration(
                                 color: Colors.grey[300],
                                 borderRadius: BorderRadius.circular(10)),
-                            child: Center(
-                              child: Text(
-                                'Image $i',
+                            child: Container(
+                              child: Image(
+                                image: AssetImage(i),
+                                fit: BoxFit.cover,
                               ),
-                            ));
-                      },
-                    );
-                  }).toList(),
+                            ),
+                          );
+                        },
+                      );
+                    }).toList(),
+                  ),
                 )
               ],
             ),
