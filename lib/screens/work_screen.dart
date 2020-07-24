@@ -9,11 +9,6 @@ class WorkScreen extends StatelessWidget with NavigationStates {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'My Work',
-            style: Theme.of(context).textTheme.headline3,
-          ),
-          SizedBox(height: 30),
           Expanded(
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -29,11 +24,15 @@ class WorkScreen extends StatelessWidget with NavigationStates {
                         .mainBottomSheet(context);
                   },
                   child: Container(
-                    child: Center(child: Text('$index')),
+                    child: Center(
+                        child: Image(
+                      image: AssetImage('assets/images/mockup${index + 1}.png'),
+                      fit: BoxFit.contain,
+                    )),
                   ),
                 );
               },
-              itemCount: 10,
+              itemCount: 6,
             ),
           ),
         ],

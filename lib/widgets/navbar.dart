@@ -31,11 +31,8 @@ class _NavBarState extends State<NavBar> {
             padding: const EdgeInsets.only(bottom: 10),
             child: CircleAvatar(
               backgroundColor: Theme.of(context).iconTheme.color,
-              maxRadius: 30,
-              child: Icon(
-                Icons.person,
-                color: Theme.of(context).canvasColor,
-              ),
+              maxRadius: 25,
+              backgroundImage: AssetImage('assets/images/profile_pic.jpg'),
             ),
           ),
           Expanded(

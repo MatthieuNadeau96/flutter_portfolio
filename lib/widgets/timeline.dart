@@ -41,10 +41,15 @@ class Timeline extends StatelessWidget {
             rightChild: Container(
               margin: EdgeInsets.only(left: 25),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    description,
-                    style: Theme.of(context).textTheme.bodyText1,
+                  Flexible(
+                    flex: 1,
+                    fit: FlexFit.loose,
+                    child: Text(
+                      description,
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
                   ),
                   SizedBox(height: 20),
                 ],
