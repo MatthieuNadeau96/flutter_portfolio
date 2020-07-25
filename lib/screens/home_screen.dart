@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        constraints: BoxConstraints(maxWidth: 550),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -9,6 +9,7 @@ class ContactScreen extends StatelessWidget with NavigationStates {
     final theme = Theme.of(context);
     return Scaffold(
       body: Container(
+        constraints: BoxConstraints(maxWidth: 550),
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
