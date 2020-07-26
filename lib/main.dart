@@ -53,7 +53,7 @@ class MainHomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 30.0),
+          padding: const EdgeInsets.only(top: 0.0),
           child: BlocProvider<NavigationBloc>(
             create: (context) => NavigationBloc(HomeScreen()),
             child: Row(

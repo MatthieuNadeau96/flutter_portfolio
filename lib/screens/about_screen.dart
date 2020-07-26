@@ -12,6 +12,7 @@ class AboutScreen extends StatelessWidget with NavigationStates {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 30),
               Text(
                 'My Timeline',
                 style: Theme.of(context).textTheme.headline3,
@@ -107,6 +108,8 @@ class AboutScreen extends StatelessWidget with NavigationStates {
                 description:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               ),
+
+              SizedBox(height: 30),
             ],
           ),
         ),

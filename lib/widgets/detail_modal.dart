@@ -20,7 +20,10 @@ class DetailModal {
   mainBottomSheet(BuildContext context) {
     showModalBottomSheet(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        ),
       ),
       context: context,
       builder: (BuildContext context) {
@@ -54,11 +57,14 @@ class Details extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 15,
+      ),
+      child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 30),
             Text(
               title,
               style: Theme.of(context).textTheme.headline3,
@@ -153,7 +159,6 @@ class Details extends StatelessWidget {
                       return Container(
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
                             borderRadius: BorderRadius.circular(10)),
                         child: Container(
                           child: Image(
@@ -166,7 +171,8 @@ class Details extends StatelessWidget {
                   );
                 }).toList(),
               ),
-            )
+            ),
+            SizedBox(height: 30),
           ],
         ),
       ),

@@ -57,35 +57,55 @@ class _WorkScreenState extends State<WorkScreen> {
                           final ProjectModel project = projects[index];
                           return Container(
                             height: 100,
-                            child: InkWell(
-                              onTap: () {
-                                setState(() {
-                                  detailOpened = true;
-                                  titleDetails = project.title;
-                                  descriptionDetails = project.description;
-                                  phonePicDetails = project.phonePic;
-                                  developmentDetails = project.development;
-                                  toolsDetails = project.tools;
-                                  screenshotsDetails = project.screenshots;
-                                });
-                                mobile
-                                    ? DetailModal(
-                                        title: project.title,
-                                        description: project.description,
-                                        phonePic: project.phonePic,
-                                        development: project.development,
-                                        tools: project.tools,
-                                        screenshots: project.screenshots,
-                                      ).mainBottomSheet(context)
-                                    : Container();
-                              },
-                              child: Container(
-                                child: Center(
-                                    child: Image(
-                                  image: AssetImage(project.phonePic),
-                                  fit: BoxFit.contain,
-                                )),
-                              ),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  child: Center(
+                                      child: Image(
+                                    image: AssetImage(project.phonePic),
+                                    fit: BoxFit.contain,
+                                  )),
+                                ),
+                                Positioned.fill(
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: InkWell(
+                                      hoverColor: Colors.white10,
+                                      focusColor: Theme.of(context)
+                                          .textTheme
+                                          .bodyText1
+                                          .color,
+                                      onTap: () {
+                                        setState(() {
+                                          detailOpened = true;
+                                          titleDetails = project.title;
+                                          descriptionDetails =
+                                              project.description;
+                                          phonePicDetails = project.phonePic;
+                                          developmentDetails =
+                                              project.development;
+                                          toolsDetails = project.tools;
+                                          screenshotsDetails =
+                                              project.screenshots;
+                                        });
+                                        mobile
+                                            ? DetailModal(
+                                                title: project.title,
+                                                description:
+                                                    project.description,
+                                                phonePic: project.phonePic,
+                                                development:
+                                                    project.development,
+                                                tools: project.tools,
+                                                screenshots:
+                                                    project.screenshots,
+                                              ).mainBottomSheet(context)
+                                            : Container();
+                                      },
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           );
                         },
@@ -105,10 +125,10 @@ class _WorkScreenState extends State<WorkScreen> {
                         ? [
                             BoxShadow(
                               color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 0,
+                              spreadRadius: 0,
+                              blurRadius: 13,
                               offset:
-                                  Offset(0, 0), // changes position of shadow
+                                  Offset(-2, 0), // changes position of shadow
                             ),
                           ]
                         : null,
