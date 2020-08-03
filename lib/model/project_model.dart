@@ -7,6 +7,8 @@ class ProjectModel {
   final List<String> tools;
   final String phonePic;
   final List<String> screenshots;
+  final String linkToLive;
+  final String linkToCode;
 
   ProjectModel({
     @required this.title,
@@ -15,5 +17,7 @@ class ProjectModel {
     this.tools,
     @required this.phonePic,
     @required this.screenshots,
+    this.linkToLive,
+    this.linkToCode,
   });
 }

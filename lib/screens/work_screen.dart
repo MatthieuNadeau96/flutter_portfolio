@@ -21,6 +21,8 @@ class _WorkScreenState extends State<WorkScreen> {
   List<String> toolsDetails;
   List<String> screenshotsDetails;
   bool detailOpened = false;
+  String linkToCodeDetails;
+  String linkToLiveDetails;
   @override
   void initState() {
     super.initState();
@@ -87,19 +89,27 @@ class _WorkScreenState extends State<WorkScreen> {
                                           toolsDetails = project.tools;
                                           screenshotsDetails =
                                               project.screenshots;
+                                          linkToLiveDetails =
+                                              project.linkToLive;
+                                          linkToCodeDetails =
+                                              project.linkToCode;
                                         });
                                         mobile
                                             ? DetailModal(
-                                                title: project.title,
-                                                description:
-                                                    project.description,
-                                                phonePic: project.phonePic,
-                                                development:
-                                                    project.development,
-                                                tools: project.tools,
-                                                screenshots:
-                                                    project.screenshots,
-                                              ).mainBottomSheet(context)
+                                                    title: project.title,
+                                                    description:
+                                                        project.description,
+                                                    phonePic: project.phonePic,
+                                                    development:
+                                                        project.development,
+                                                    tools: project.tools,
+                                                    screenshots:
+                                                        project.screenshots,
+                                                    linkToCode:
+                                                        project.linkToCode,
+                                                    linkToLive:
+                                                        project.linkToLive)
+                                                .mainBottomSheet(context)
                                             : Container();
                                       },
                                     ),
@@ -133,7 +143,6 @@ class _WorkScreenState extends State<WorkScreen> {
                           ]
                         : null,
                   ),
-                  // color: Colors.green,
                   child: (titleDetails != null)
                       ? Details(
                           title: titleDetails,
@@ -142,6 +151,8 @@ class _WorkScreenState extends State<WorkScreen> {
                           development: developmentDetails,
                           tools: toolsDetails,
                           screenshots: screenshotsDetails,
+                          linkToLive: linkToLiveDetails,
+                          linkToCode: linkToCodeDetails,
                         )
                       : (Container()),
                 ),

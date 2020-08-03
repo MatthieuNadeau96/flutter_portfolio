@@ -5,18 +5,24 @@ final String image = 'assets/images';
 List<ProjectModel> getProjects() {
   List<ProjectModel> projects = [
     ProjectModel(
-      title: 'Chat App',
+      title: 'Shop App',
       description:
-          'A Chat application based on a dribbble post. Not functional.',
-      phonePic: '$image/mockup1.png',
+          'An application that allows the user, once they have signed up, to view products in a shop.' +
+              ' This shop app has basic e-commerce interaction like adding and removing products from a cart, ' +
+              'favoriting products to help them sort, ordering products added in their carts, ' +
+              'and users can add and edit their own products.',
+      phonePic: '$image/shop_app/shop.png',
       screenshots: [
-        '$image/mockup1.png',
-        '$image/mockup1.png',
-        '$image/mockup1.png'
+        '$image/shop_app/sidebar.png',
+        '$image/shop_app/cart.png',
+        '$image/shop_app/edit.png',
+        '$image/shop_app/orders.png',
       ],
       development:
           'Developed less than a week with the help of a youtube video.',
-      tools: ['Flutter', 'Dart'],
+      tools: ['Flutter', 'Dart', 'Firebase'],
+      linkToLive: 'https://flutter-shop-app-9a5c9.web.app/#/',
+      linkToCode: 'https://github.com/MatthieuNadeau96/Flutter_shop_app',
     ),
     ProjectModel(
       title: 'Productive Timer',
@@ -39,6 +45,8 @@ List<ProjectModel> getProjects() {
         'Third Party thing',
         'Otherthing',
       ],
+      linkToCode: 'https://github.com/MatthieuNadeau96/productive-timer',
+      linkToLive: 'https://productive-timer-c7c5c.web.app/#/',
     ),
     ProjectModel(
       title: 'Personal Expenses',
@@ -60,19 +68,30 @@ List<ProjectModel> getProjects() {
         'Third Party thing',
         'Otherthing',
       ],
+      linkToCode:
+          'https://github.com/MatthieuNadeau96/Flutter_personal_expenses',
+      linkToLive: 'https://flutter-personal-expense-eb6a2.web.app/#/',
     ),
     ProjectModel(
-      title: 'Meals App',
-      description: 'A simple meal recipe application.',
-      phonePic: '$image/mockup4.png',
+      title: 'Movie Theater',
+      description:
+          'This application demonstrates the use of APIs and BLoC state management. ' +
+              'With the help of TMDb, this app displays movies that are currently playing in theater. ' +
+              'The user is able to swipe between movies, see more details about them, ' +
+              'and select available seats based on the time they choose.' +
+              '',
+      phonePic: '$image/movie_theater/home.png',
       screenshots: [
-        '$image/mockup4.png',
-        '$image/mockup4.png',
-        '$image/mockup4.png'
+        '$image/movie_theater/seat_time.png',
+        '$image/movie_theater/details.png',
+        '$image/movie_theater/seat_pay.png',
+        '$image/movie_theater/cast.png',
       ],
       development:
-          'Developed to learn the ins and out of Flutters grid and sorting.',
-      tools: ['Flutter', 'Dart'],
+          'This project help me grasp the concept of BLoC state management, as well as fetching APIs, with Dart & Flutter.',
+      tools: ['Flutter', 'Dart', 'TMDb'],
+      linkToLive: 'https://movie-theater-ebe44.web.app/#/',
+      linkToCode: 'https://github.com/MatthieuNadeau96/movie_theater',
     ),
     ProjectModel(
       title: 'Snake Game',

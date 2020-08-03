@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailModal {
   final String title;
@@ -9,6 +10,8 @@ class DetailModal {
   final String development;
   final List<String> tools;
   final List<String> screenshots;
+  final String linkToCode;
+  final String linkToLive;
   DetailModal({
     this.title,
     this.description,
@@ -16,6 +19,8 @@ class DetailModal {
     this.development,
     this.tools,
     this.screenshots,
+    this.linkToCode,
+    this.linkToLive,
   });
   mainBottomSheet(BuildContext context) {
     showModalBottomSheet(
@@ -34,6 +39,8 @@ class DetailModal {
           development: development,
           tools: tools,
           screenshots: screenshots,
+          linkToLive: linkToLive,
+          linkToCode: linkToCode,
         );
       },
     );
@@ -47,6 +54,8 @@ class Details extends StatelessWidget {
   final String development;
   final List<String> tools;
   final List<String> screenshots;
+  final String linkToCode;
+  final String linkToLive;
   Details({
     this.title,
     this.description,
@@ -54,6 +63,8 @@ class Details extends StatelessWidget {
     this.development,
     this.tools,
     this.screenshots,
+    this.linkToCode,
+    this.linkToLive,
   });
   @override
   Widget build(BuildContext context) {
@@ -75,13 +86,13 @@ class Details extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 RaisedButton.icon(
-                  onPressed: () {},
+                  onPressed: () => _handlePress(linkToCode),
                   label: Text('Github'),
                   icon: FaIcon(FontAwesomeIcons.github,
                       size: 16, color: Theme.of(context).iconTheme.color),
                 ),
                 RaisedButton.icon(
-                  onPressed: () {},
+                  onPressed: () => _handlePress(linkToLive),
                   icon: FaIcon(FontAwesomeIcons.googlePlay,
                       size: 14, color: Theme.of(context).iconTheme.color),
                   label: Text('Live'),
@@ -177,5 +188,13 @@ class Details extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+void _handlePress(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
