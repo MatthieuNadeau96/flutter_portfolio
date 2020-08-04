@@ -14,7 +14,10 @@ class Timeline extends StatelessWidget {
           TimelineTile(
             isFirst: true,
             isLast: true,
-            indicatorStyle: IndicatorStyle(width: 12),
+            indicatorStyle: IndicatorStyle(
+              width: 12,
+              color: Theme.of(context).iconTheme.color,
+            ),
             alignment: TimelineAlign.left,
             rightChild: Container(
               margin: EdgeInsets.only(left: 15),
@@ -35,8 +38,16 @@ class Timeline extends StatelessWidget {
               width: 12,
               color: Colors.transparent,
             ),
-            bottomLineStyle: LineStyle(width: 1),
-            topLineStyle: LineStyle(width: 1),
+            bottomLineStyle: LineStyle(
+              width: 1,
+              color:
+                  Theme.of(context).textTheme.bodyText1.color.withOpacity(0.5),
+            ),
+            topLineStyle: LineStyle(
+              width: 1,
+              color:
+                  Theme.of(context).textTheme.bodyText1.color.withOpacity(0.5),
+            ),
             alignment: TimelineAlign.left,
             rightChild: Container(
               margin: EdgeInsets.only(left: 25),

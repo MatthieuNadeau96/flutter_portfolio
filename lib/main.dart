@@ -16,31 +16,31 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primaryColor: Colors.blue,
+          primaryColorDark: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           canvasColor: Colors.white,
+          accentColor: Color(0xffEEC271),
           textTheme: TextTheme(
             headline3: TextStyle(
-                fontSize: 34,
-                color: Colors.grey[600],
-                fontWeight: FontWeight.bold),
+                fontSize: 34, color: Colors.black, fontWeight: FontWeight.bold),
             headline4: TextStyle(
               fontSize: 24,
-              color: Colors.grey[600],
+              color: Colors.black.withOpacity(0.8),
             ),
             headline5: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
-              color: Colors.grey[500],
+              color: Colors.black.withOpacity(0.8),
             ),
             bodyText1: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w400,
-              color: Colors.grey[500], //#868786
+              color: Colors.black.withOpacity(0.7), //#868786
             ),
           ),
           iconTheme: IconThemeData(
-            color: Colors.grey[600],
+            color: Colors.black.withOpacity(0.8),
           )),
       home: MainHomeScreen(),
     );

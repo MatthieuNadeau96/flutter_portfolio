@@ -90,7 +90,7 @@ List<ProjectModel> getProjects() {
       development:
           'This project help me grasp the concept of BLoC state management, as well as fetching APIs, with Dart & Flutter.',
       tools: ['Flutter', 'Dart', 'TMDb'],
-      linkToLive: 'https://movie-theater-ebe44.web.app/#/',
+      linkToLive: 'https://matthieunadeau-movie-theater.netlify.app/#/',
       linkToCode: 'https://github.com/MatthieuNadeau96/movie_theater',
     ),
     ProjectModel(
