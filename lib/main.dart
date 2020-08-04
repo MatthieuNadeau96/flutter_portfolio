@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColorDark: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           canvasColor: Colors.white,
-          accentColor: Color(0xffEEC271),
+          accentColor: Colors.blueAccent,
           textTheme: TextTheme(
             headline3: TextStyle(
                 fontSize: 34, color: Colors.black, fontWeight: FontWeight.bold),
@@ -35,6 +35,11 @@ class MyApp extends StatelessWidget {
             ),
             bodyText1: TextStyle(
               fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Colors.black.withOpacity(0.7), //#868786
+            ),
+            bodyText2: TextStyle(
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: Colors.black.withOpacity(0.7), //#868786
             ),

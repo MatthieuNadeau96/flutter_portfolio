@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
             ),
             SizedBox(height: 15),
             Text(
-              'I am a self taught developer with a passion for creating things big and small.',
+              'I am a passionate self taught learner with a passion for creating things big and small.',
               style: Theme.of(context).textTheme.bodyText1,
             ),
             SizedBox(height: 15),
