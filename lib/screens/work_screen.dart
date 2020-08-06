@@ -64,7 +64,7 @@ class _WorkScreenState extends State<WorkScreen> {
                                 Container(
                                   child: Center(
                                       child: Image(
-                                    image: AssetImage(project.phonePic),
+                                    image: AssetImage(project.displayPic),
                                     fit: BoxFit.contain,
                                   )),
                                 ),

@@ -56,11 +56,13 @@ flutter:
     - assets/images/shop_app/orders.png
     - assets/images/shop_app/shop.png
     - assets/images/shop_app/sidebar.png
+    - assets/images/shop_app/phone_pic.png
     - assets/images/movie_theater/cast.png
     - assets/images/movie_theater/details.png
     - assets/images/movie_theater/home.png
     - assets/images/movie_theater/seat_pay.png
     - assets/images/movie_theater/seat_time.png
+    - assets/images/movie_theater/phone_pic.png
     - assets/images/mockup2.png
     - assets/images/mockup3.png
     - assets/images/mockup4.png

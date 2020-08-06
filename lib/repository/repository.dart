@@ -11,7 +11,8 @@ List<ProjectModel> getProjects() {
               ' This shop app has basic e-commerce interaction like adding and removing products from a cart, ' +
               'favoriting products to help them sort, ordering products added in their carts, ' +
               'and users can add and edit their own products.',
-      phonePic: '$image/shop_app/shop.png',
+      displayPic: '$image/shop_app/shop.png',
+      phonePic: '$image/shop_app/phone_pic.png',
       screenshots: [
         '$image/shop_app/sidebar.png',
         '$image/shop_app/cart.png',
@@ -30,6 +31,7 @@ List<ProjectModel> getProjects() {
           'Countdown timer that uses the Pomodoro Technique. After every 20 minute work session ' +
               'the user will be prompted for a 5 minute break. After 4 completed work sessions will be a big break, ' +
               'usually 20 minutes.',
+      displayPic: '$image/mockup2.png',
       phonePic: '$image/mockup2.png',
       screenshots: [
         '$image/mockup2.png',
@@ -54,6 +56,7 @@ List<ProjectModel> getProjects() {
           'This application is designed to help the user keep track of their weekly expenses. ' +
               'The user can simply add an expense by filling out the form, indicating the name of the item, which day ' +
               'it was purchases and how much the item cost.',
+      displayPic: '$image/mockup3.png',
       phonePic: '$image/mockup3.png',
       screenshots: [
         '$image/mockup3.png',
@@ -80,7 +83,8 @@ List<ProjectModel> getProjects() {
               'The user is able to swipe between movies, see more details about them, ' +
               'and select available seats based on the time they choose.' +
               '',
-      phonePic: '$image/movie_theater/home.png',
+      displayPic: '$image/movie_theater/home.png',
+      phonePic: '$image/movie_theater/phone_pic.png',
       screenshots: [
         '$image/movie_theater/seat_time.png',
         '$image/movie_theater/details.png',
@@ -98,6 +102,7 @@ List<ProjectModel> getProjects() {
       description:
           'Classic snake game. User controls the snake as it grows from collecting the food on screen. ' +
               'But be careful not to eat yourself!',
+      displayPic: '$image/mockup5.png',
       phonePic: '$image/mockup5.png',
       screenshots: [
         '$image/mockup5.png',
@@ -116,6 +121,7 @@ List<ProjectModel> getProjects() {
     ProjectModel(
       title: 'Xylophone',
       description: 'A very simply musical instrument app.',
+      displayPic: '$image/mockup6.png',
       phonePic: '$image/mockup6.png',
       screenshots: [
         '$image/mockup6.png',

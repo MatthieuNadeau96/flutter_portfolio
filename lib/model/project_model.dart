@@ -5,6 +5,7 @@ class ProjectModel {
   final String description;
   final String development;
   final List<String> tools;
+  final String displayPic;
   final String phonePic;
   final List<String> screenshots;
   final String linkToLive;
@@ -15,6 +16,7 @@ class ProjectModel {
     @required this.description,
     this.development,
     this.tools,
+    @required this.displayPic,
     @required this.phonePic,
     @required this.screenshots,
     this.linkToLive,
