@@ -17,7 +17,7 @@ class AboutScreen extends StatelessWidget with NavigationStates {
               SizedBox(height: 30),
               Text(
                 'About Me',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline3,
               ),
               SizedBox(height: 15),
 
@@ -25,11 +25,8 @@ class AboutScreen extends StatelessWidget with NavigationStates {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "I carry with me 3 years of experience developing, testing, and publishing software applications. " +
-                          "I started focusing on Flutter at the beginning of this year and this portfolio reflects my abilities. " +
-                          "I have also worked with React, to build desktop applications, and Javascript to build Alexa Skills.\n " +
-                          "\nI currently live in Rhode Island but I'm eager to travel. In my free time I like to make music, playing strategy games, and pet Tasha. " +
-                          "Tasha is my dog. She's one of the smart kind that can work a phone and has made her own ",
+                      text: "I carry 3 years of experience developing, testing, and publishing software applications. In 2020, I started learning how to use Dart and Flutter to create mobile applications. Because of the current situation surrounding Covid19, I’ve been able to spend more time focusing on what I’m most passionate about. This portfolio represents the work I’ve put together in the past few months.\n " +
+                          "\nI currently live in Rhode Island but I'm eager to travel. In my free time I like to make music, playing strategy games, and pet Tasha. Tasha is my dog. She's one of the smart kind that can work a phone and has made her own ",
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                     TextSpan(
