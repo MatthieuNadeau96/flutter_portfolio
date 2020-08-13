@@ -63,9 +63,10 @@ flutter:
     - assets/images/movie_theater/seat_pay.png
     - assets/images/movie_theater/seat_time.png
     - assets/images/movie_theater/phone_pic.png
-    - assets/images/mockup2.png
-    - assets/images/mockup3.png
-    - assets/images/mockup4.png
+    - assets/images/flutter_messenger/chat_screen.png
+    - assets/images/flutter_messenger/logging_in.png
+    - assets/images/flutter_messenger/logging_out.png
+    - assets/images/flutter_messenger/login_screen.png
     - assets/images/mockup5.png
     - assets/images/mockup6.png
     - assets/images/profile_pic.jpg
