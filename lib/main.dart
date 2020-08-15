@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
               color: Colors.black.withOpacity(0.7), //#868786
             ),
             bodyText2: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.w400,
               color: Colors.black.withOpacity(0.7), //#868786
             ),

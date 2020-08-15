@@ -74,6 +74,7 @@ class Details extends StatelessWidget {
       ),
       child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 30),
             Text(
@@ -81,31 +82,78 @@ class Details extends StatelessWidget {
               style: Theme.of(context).textTheme.headline3,
             ),
             SizedBox(height: 30),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Wrap(
               children: [
-                RaisedButton.icon(
+                FlatButton.icon(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Theme.of(context).iconTheme.color),
+                  ),
                   onPressed: () => _handlePress(linkToCode),
-                  label: Text('Github'),
-                  icon: FaIcon(FontAwesomeIcons.github,
-                      size: 16, color: Theme.of(context).iconTheme.color),
+                  label: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 4,
+                      right: 4,
+                      bottom: 4,
+                    ),
+                    child: Text(
+                      'Github',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  icon: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 4,
+                      left: 4,
+                      bottom: 4,
+                    ),
+                    child: FaIcon(
+                      FontAwesomeIcons.github,
+                      size: 18,
+                      color: Color(0xff313030),
+                    ),
+                  ),
                 ),
-                RaisedButton.icon(
+                SizedBox(width: 30),
+                FlatButton.icon(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Theme.of(context).iconTheme.color),
+                  ),
                   onPressed: () => _handlePress(linkToLive),
-                  icon: FaIcon(FontAwesomeIcons.googlePlay,
-                      size: 14, color: Theme.of(context).iconTheme.color),
-                  label: Text('Live'),
+                  icon: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 4,
+                      left: 4,
+                      bottom: 4,
+                    ),
+                    child: FaIcon(
+                      FontAwesomeIcons.googlePlay,
+                      size: 16,
+                      color: Color(0xff313030),
+                    ),
+                  ),
+                  label: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 4,
+                      right: 4,
+                      bottom: 4,
+                    ),
+                    child: Text(
+                      'Live',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ),
                 ),
               ],
             ),
-            SizedBox(height: 30),
-            Divider(
-              color: Theme.of(context).textTheme.bodyText1.color,
-              endIndent: MediaQuery.of(context).size.width * 0.43,
-              indent: MediaQuery.of(context).size.width * 0.43,
-              thickness: 1,
-            ),
+            SizedBox(height: 15),
+            // Divider(
+            //   color: Theme.of(context).textTheme.bodyText1.color,
+            //   endIndent: MediaQuery.of(context).size.width * 0.43,
+            //   indent: MediaQuery.of(context).size.width * 0.43,
+            //   thickness: 1,
+            // ),
             SizedBox(height: 30),
             Text(
               description,
@@ -136,18 +184,20 @@ class Details extends StatelessWidget {
                 children: List.generate(
                   tools.length,
                   (index) => Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(
                         color: Theme.of(context).textTheme.bodyText1.color,
                         width: 1,
                       ),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                    child: Text(
-                      tools[index],
-                      style: Theme.of(context).textTheme.bodyText1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        tools[index],
+                        style: TextStyle(fontSize: 14),
+                      ),
                     ),
                   ),
                 ),

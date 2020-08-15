@@ -12,7 +12,6 @@ class HomeScreen extends StatelessWidget with NavigationStates {
         padding: const EdgeInsets.only(top: 30),
         constraints: BoxConstraints(maxWidth: 550),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -27,11 +26,11 @@ class HomeScreen extends StatelessWidget with NavigationStates {
             SizedBox(height: 15),
             Text(
               'I am a passionate self taught learner with a passion for creating things big and small.',
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyText2,
             ),
             SizedBox(height: 15),
             Container(
-              width: 280,
+              width: 300,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +39,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.github,
-                        color: theme.iconTheme.color,
+                        color: Color(0xff313030),
                       ),
                       onPressed: () =>
                           _handlePress('https://github.com/MatthieuNadeau96/'),
@@ -50,7 +49,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.instagram,
-                        color: theme.iconTheme.color,
+                        color: Color(0xff963AA1),
                       ),
                       onPressed: () {},
                     ),
@@ -59,7 +58,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.twitter,
-                        color: theme.iconTheme.color,
+                        color: Color(0xff1DA1F2),
                       ),
                       onPressed: () {},
                     ),
@@ -68,7 +67,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.solidEnvelope,
-                        color: theme.iconTheme.color,
+                        color: Color(0xffD7574C),
                       ),
                       onPressed: () =>
                           _handlePress('mailto:matthieunadeau96@gmail.com'),
@@ -78,7 +77,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                     child: IconButton(
                       icon: FaIcon(
                         FontAwesomeIcons.linkedin,
-                        color: theme.iconTheme.color,
+                        color: Color(0xff1277B5),
                       ),
                       onPressed: () => _handlePress(
                           'https://www.linkedin.com/in/matthieu-nadeau-28321013a'),
