@@ -219,12 +219,13 @@ class Details extends StatelessWidget {
                     builder: (BuildContext context) {
                       return Container(
                         width: MediaQuery.of(context).size.width,
+                        height: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10)),
                         child: Container(
                           child: Image(
                             image: AssetImage(i),
-                            fit: BoxFit.cover,
+                            fit: BoxFit.contain,
                           ),
                         ),
                       );
@@ -233,7 +234,7 @@ class Details extends StatelessWidget {
                 }).toList(),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
           ],
         ),
       ),
