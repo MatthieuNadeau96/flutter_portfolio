@@ -52,7 +52,7 @@ List<ProjectModel> getProjects() {
       description:
           'Chat application that allows the user to send and receive messages.',
       displayPic: '$image/flutter_messenger/logging_in.png',
-      phonePic: '$image/flutter_messenger/chat_screen.png',
+      phonePic: '$image/flutter_messenger/phone_pic.png',
       screenshots: [
         '$image/flutter_messenger/logging_out.png',
         '$image/flutter_messenger/logging_in.png',
@@ -65,57 +65,59 @@ List<ProjectModel> getProjects() {
         'Dart',
         'Firebase',
       ],
+      linkToLive: 'https://flutter-messenger-48b0e.web.app/#/',
+      linkToCode: 'https://github.com/MatthieuNadeau96/flutter_messenger',
     ),
-    ProjectModel(
-      title: 'Personal Expenses',
-      description:
-          'This application is designed to help the user keep track of their weekly expenses. ' +
-              'The user can simply add an expense by filling out the form, indicating the name of the item, which day ' +
-              'it was purchases and how much the item cost.',
-      displayPic: '$image/mockup6.png',
-      phonePic: '$image/mockup6.png',
-      screenshots: [
-        '$image/mockup6.png',
-        '$image/mockup6.png',
-        '$image/mockup6.png'
-      ],
-      development: 'This project used state managment.',
-      tools: [
-        'Flutter',
-        'Dart',
-        'Something else',
-        'Third Party thing',
-        'Otherthing',
-      ],
-      linkToCode:
-          'https://github.com/MatthieuNadeau96/Flutter_personal_expenses',
-      linkToLive: 'https://flutter-personal-expense-eb6a2.web.app/#/',
-    ),
-    ProjectModel(
-      title: 'Productive Timer',
-      description:
-          'Countdown timer that uses the Pomodoro Technique. After every 20 minute work session ' +
-              'the user will be prompted for a 5 minute break. After 4 completed work sessions will be a big break, ' +
-              'usually 20 minutes.',
-      displayPic: '$image/mockup6.png',
-      phonePic: '$image/mockup6.png',
-      screenshots: [
-        '$image/mockup6.png',
-        '$image/mockup6.png',
-        '$image/mockup6.png'
-      ],
-      development:
-          'This project utilizes Datetime countdown functionality and state managment.',
-      tools: [
-        'Flutter',
-        'Dart',
-        'Something else',
-        'Third Party thing',
-        'Otherthing',
-      ],
-      linkToCode: 'https://github.com/MatthieuNadeau96/productive-timer',
-      linkToLive: 'https://productive-timer-c7c5c.web.app/#/',
-    ),
+    // ProjectModel(
+    //   title: 'Personal Expenses',
+    //   description:
+    //       'This application is designed to help the user keep track of their weekly expenses. ' +
+    //           'The user can simply add an expense by filling out the form, indicating the name of the item, which day ' +
+    //           'it was purchases and how much the item cost.',
+    //   displayPic: '$image/mockup6.png',
+    //   phonePic: '$image/mockup6.png',
+    //   screenshots: [
+    //     '$image/mockup6.png',
+    //     '$image/mockup6.png',
+    //     '$image/mockup6.png'
+    //   ],
+    //   development: 'This project used state managment.',
+    //   tools: [
+    //     'Flutter',
+    //     'Dart',
+    //     'Something else',
+    //     'Third Party thing',
+    //     'Otherthing',
+    //   ],
+    //   linkToCode:
+    //       'https://github.com/MatthieuNadeau96/Flutter_personal_expenses',
+    //   linkToLive: 'https://flutter-personal-expense-eb6a2.web.app/#/',
+    // ),
+    // ProjectModel(
+    //   title: 'Productive Timer',
+    //   description:
+    //       'Countdown timer that uses the Pomodoro Technique. After every 20 minute work session ' +
+    //           'the user will be prompted for a 5 minute break. After 4 completed work sessions will be a big break, ' +
+    //           'usually 20 minutes.',
+    //   displayPic: '$image/mockup6.png',
+    //   phonePic: '$image/mockup6.png',
+    //   screenshots: [
+    //     '$image/mockup6.png',
+    //     '$image/mockup6.png',
+    //     '$image/mockup6.png'
+    //   ],
+    //   development:
+    //       'This project utilizes Datetime countdown functionality and state managment.',
+    //   tools: [
+    //     'Flutter',
+    //     'Dart',
+    //     'Something else',
+    //     'Third Party thing',
+    //     'Otherthing',
+    //   ],
+    //   linkToCode: 'https://github.com/MatthieuNadeau96/productive-timer',
+    //   linkToLive: 'https://productive-timer-c7c5c.web.app/#/',
+    // ),
   ];
   return projects;
 }

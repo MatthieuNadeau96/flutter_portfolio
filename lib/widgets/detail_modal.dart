@@ -160,11 +160,13 @@ class Details extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyText1,
             ),
             SizedBox(height: 30),
+
             Container(
-              height: MediaQuery.of(context).size.height * 0.50,
+              // color: Colors.blue,
               width: double.infinity,
               child: Image(
                 image: AssetImage(phonePic),
+                // fit: BoxFit.cover,
               ),
             ),
             SizedBox(height: 30),

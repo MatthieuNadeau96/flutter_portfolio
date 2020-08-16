@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.blue,
           primaryColorDark: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          canvasColor: Colors.white,
+          canvasColor: Color(0xffF9F9F9),
           accentColor: Colors.blueAccent,
           textTheme: TextTheme(
             headline3: TextStyle(
