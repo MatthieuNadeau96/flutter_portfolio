@@ -190,7 +190,11 @@ class Details extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(
-                        color: Theme.of(context).textTheme.bodyText1.color,
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodyText1
+                            .color
+                            .withOpacity(0.2),
                         width: 1,
                       ),
                     ),
@@ -198,7 +202,14 @@ class Details extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         tools[index],
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Theme.of(context)
+                              .textTheme
+                              .bodyText1
+                              .color
+                              .withOpacity(0.6),
+                        ),
                       ),
                     ),
                   ),

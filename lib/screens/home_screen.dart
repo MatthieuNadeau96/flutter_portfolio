@@ -19,13 +19,12 @@ class HomeScreen extends StatelessWidget with NavigationStates {
               style: Theme.of(context).textTheme.headline3,
             ),
             SizedBox(height: 15),
+            // Text(
+            //   'Mobile Developer',
+            //   style: Theme.of(context).textTheme.headline4,
+            // ),
             Text(
-              'Mobile Developer',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            SizedBox(height: 15),
-            Text(
-              'I am a passionate self taught learner with a passion for creating things big and small.',
+              'A mobile developer with a passion for learning.',
               style: Theme.of(context).textTheme.bodyText2,
             ),
             SizedBox(height: 15),
@@ -47,26 +46,9 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                   ),
                   Container(
                     child: IconButton(
-                      icon: FaIcon(
-                        FontAwesomeIcons.instagram,
-                        color: Color(0xff963AA1),
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: FaIcon(
-                        FontAwesomeIcons.twitter,
-                        color: Color(0xff1DA1F2),
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                      icon: FaIcon(
-                        FontAwesomeIcons.solidEnvelope,
+                      icon: Icon(
+                        Icons.mail,
+                        size: 26,
                         color: Color(0xffD7574C),
                       ),
                       onPressed: () =>
@@ -81,6 +63,24 @@ class HomeScreen extends StatelessWidget with NavigationStates {
                       ),
                       onPressed: () => _handlePress(
                           'https://www.linkedin.com/in/matthieu-nadeau-28321013a'),
+                    ),
+                  ),
+                  Container(
+                    child: IconButton(
+                      icon: FaIcon(
+                        FontAwesomeIcons.instagram,
+                        color: Color(0xff963AA1),
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                  Container(
+                    child: IconButton(
+                      icon: FaIcon(
+                        FontAwesomeIcons.twitter,
+                        color: Color(0xff1DA1F2),
+                      ),
+                      onPressed: () {},
                     ),
                   ),
                 ],

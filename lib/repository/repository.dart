@@ -21,7 +21,7 @@ List<ProjectModel> getProjects() {
         '$image/movie_theater/cast.png',
       ],
       development:
-          'This project help me grasp the concept of BLoC state management, as well as fetching APIs, with Dart & Flutter.',
+          'This project help me grasp the concept of BLoC state management, as well as fetching APIs with Dart & Flutter. The biggest challenge I faced with this project, was not only understanding how to use BLoC, but also teaching myself the importance of setting up the data models and repositories beforehand. A fun takeaway for me with this project was learning how to use Rive to make the icon animation I added when the user purchases a ticket.',
       tools: ['Flutter', 'Dart', 'TMDb'],
       linkToLive: 'https://matthieunadeau-movie-theater.netlify.app/#/',
       linkToCode: 'https://github.com/MatthieuNadeau96/movie_theater',
@@ -42,7 +42,7 @@ List<ProjectModel> getProjects() {
         '$image/shop_app/orders.png',
       ],
       development:
-          'Developed less than a week with the help of a youtube video.',
+          'With this shop application I learned how to use Providers to manage state, how to use forms, how to send Http requests, and how to authenticate users.',
       tools: ['Flutter', 'Dart', 'Firebase'],
       linkToLive: 'https://flutter-shop-app-9a5c9.web.app/#/',
       linkToCode: 'https://github.com/MatthieuNadeau96/Flutter_shop_app',

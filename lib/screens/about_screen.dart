@@ -21,26 +21,10 @@ class AboutScreen extends StatelessWidget with NavigationStates {
               ),
               SizedBox(height: 15),
 
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: "I carry 3 years of experience developing, testing, and publishing software applications. In 2020, I started learning how to use Dart and Flutter to create mobile applications. Because of the current situation surrounding Covid19, I’ve been able to spend more time focusing on what I’m most passionate about. This portfolio represents the work I’ve put together in the past few months.\n " +
-                          "\nI currently live in Rhode Island but I'm eager to travel. In my free time I like to make music, playing strategy games, and pet Tasha. Tasha is my dog. She's one of the smart kind that can work a phone and has made her own ",
-                      style: Theme.of(context).textTheme.bodyText2,
-                    ),
-                    TextSpan(
-                        text: "Instagram.",
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => _handlePress(
-                              'https://www.instagram.com/tashathetoad/')),
-                  ],
-                ),
+              Text(
+                "I carry 3 years of experience designing, developing, and testing mobile and web applications. Earlier this year, I started learning how to use Dart and Flutter to create mobile applications. This portfolio represents the work I’ve put together in the past few months.\n " +
+                    "\nI currently live in Rhode Island and I'm eager to travel. In my free time I like to code, learn, make music, and hangout with my dog Tasha. I've spent most of my time coding alone so I'm very much looking forward to the opportunity of working and being part of a team.",
+                style: Theme.of(context).textTheme.bodyText2,
               ),
 
               // SizedBox(height: 30),
