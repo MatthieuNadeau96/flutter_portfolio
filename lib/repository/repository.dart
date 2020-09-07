@@ -50,7 +50,7 @@ List<ProjectModel> getProjects() {
     ProjectModel(
       title: 'Chat app',
       description:
-          'Chat application that allows the user to send and receive messages.',
+          'A pretty straightforward chat application that allows the user to send and receive messages after authenticating.',
       displayPic: '$image/flutter_messenger/logging_in.png',
       phonePic: '$image/flutter_messenger/phone_pic.png',
       screenshots: [
@@ -59,7 +59,7 @@ List<ProjectModel> getProjects() {
         '$image/flutter_messenger/chat_screen.png'
       ],
       development:
-          'This project utilizes Firebase\'s authentication, to allow user\'s to log in and sign up, and cloud firestore to receive and send messages. ',
+          'This project utilizes Firebase\'s authentication to allow user\'s to log in and sign up, and cloud firestore to receive and send messages. ',
       tools: [
         'Flutter',
         'Dart',

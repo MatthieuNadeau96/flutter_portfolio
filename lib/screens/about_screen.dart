@@ -23,7 +23,7 @@ class AboutScreen extends StatelessWidget with NavigationStates {
 
               Text(
                 "I carry 3 years of experience designing, developing, and testing mobile and web applications. Earlier this year, I started learning how to use Dart and Flutter to create mobile applications. This portfolio represents the work I’ve put together in the past few months.\n " +
-                    "\nI currently live in Rhode Island and I'm eager to travel. In my free time I like to code, learn, make music, and hangout with my dog Tasha. I've spent most of my time coding alone so I'm very much looking forward to the opportunity of working with and being part of a team.",
+                    "\nI currently live in Rhode Island and I'm eager to travel. In my free time I like to code, make music, and hangout with my dog Tasha. I'm quite used to coding and working alone so I'm very much looking forward to the opportunity of working with and being part of a team.",
                 style: Theme.of(context).textTheme.bodyText2,
               ),
 

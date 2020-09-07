@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget with NavigationStates {
             //   style: Theme.of(context).textTheme.headline4,
             // ),
             Text(
-              'A mobile developer with a passion for learning.',
+              '"I have no special talents. I am only passionately curious."',
               style: Theme.of(context).textTheme.bodyText2,
             ),
             SizedBox(height: 15),
