@@ -69,6 +69,14 @@ flutter:
     - assets/images/flutter_messenger/logging_out.png
     - assets/images/flutter_messenger/login_screen.png
     - assets/images/flutter_messenger/phone_pic.png
+    - assets/images/flow_time/flow_dark_running.jpg
+    - assets/images/flow_time/flow_screen.jpg
+    - assets/images/flow_time/flow_screen_dark.jpg
+    - assets/images/flow_time/flow_screen_no_coffee.jpg
+    - assets/images/flow_time/flow_screen_opened.jpg
+    - assets/images/flow_time/flow_screen_running.jpg
+    - assets/images/flow_time/settings.jpg
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

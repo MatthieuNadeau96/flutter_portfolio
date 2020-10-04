@@ -5,6 +5,29 @@ final String image = 'assets/images';
 List<ProjectModel> getProjects() {
   List<ProjectModel> projects = [
     ProjectModel(
+      title: 'Flow Time',
+      description:
+          'This application demonstrates the use of APIs and BLoC state management. ' +
+              'With the help of TMDb, this app displays movies that are currently playing in theater. ' +
+              'The user is able to swipe between movies, see more details about them, ' +
+              'and select available seats based on the time they choose.' +
+              '',
+      displayPic: '$image/flow_time/flow_screen.jpg',
+      phonePic: '$image/flow_time/phone_pic.jpg',
+      screenshots: [
+        '$image/flow_time/flow_dark_running.jpg',
+        '$image/flow_time/settings.jpg',
+        '$image/flow_time/flow_screen_dark.jpg',
+        '$image/flow_time/flow_screen_no_coffee.jpg',
+      ],
+      development:
+          'This project help me grasp the concept of BLoC state management, as well as fetching APIs with Dart & Flutter. The biggest challenge I faced with this project, was not only understanding how to use BLoC, but also teaching myself the importance of setting up the data models and repositories beforehand. A fun takeaway for me with this project was learning how to use Rive to make the icon animation I added when the user purchases a ticket.',
+      tools: ['Flutter', 'Dart', 'TMDb'],
+      linkToLive:
+          'https://play.google.com/store/apps/details?id=com.matthieunadeau.flow_time',
+      linkToCode: 'https://github.com/MatthieuNadeau96/flow_time',
+    ),
+    ProjectModel(
       title: 'Movie Theater',
       description:
           'This application demonstrates the use of APIs and BLoC state management. ' +
